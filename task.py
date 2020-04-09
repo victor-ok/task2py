@@ -29,8 +29,8 @@ while Continue:
     password = gen_password(details)
     print(f"Your generated password is {password}")
     confirm_password = input("Do you like the generated password? [Y/N]")
+    Confirm = True
     
-Confirm = True
 while Confirm:
     if confirm_password == "Y":
         details.append(password)
