@@ -30,24 +30,24 @@ while Continue:
     print(f"Your generated password is {password}")
     confirm_password = input("Do you like the generated password? [Y/N]")
     Confirm = True
-    
-while Confirm:
-    if confirm_password == "Y":
-        details.append(password)
-        Storage.append(details)
-        confirm =False
-    else:
-        user_password = str(input("Please input your desired password\n Characters must be more than 7: "))
-        password_length =True
-        while password_length:
-            if len(user_password) >= 7:
-                print("Your password has been accepted")
-                details.append(user_password)
-                Storage.append(details)
-                password_length = False
-                Confirm = False
-            else:
-                user_password = input("Your password was not accepted\n Please enter a password of more than 7 characters")
+
+    while Confirm:
+        if confirm_password == "Y":
+            details.append(password)
+            Storage.append(details)
+            confirm =False
+        else:
+            user_password = str(input("Please input your desired password\n Characters must be more than 7: "))
+            password_length =True
+            while password_length:
+                if len(user_password) >= 7:
+                    print("Your password has been accepted")
+                    details.append(user_password)
+                    Storage.append(details)
+                    password_length = False
+                    Confirm = False
+                else:
+                    user_password = input("Your password was not accepted\n Please enter a password of more than 7 characters")
 
 new_user =str(input("Do you want to register another user?\n Y or N: "))
 if new_user =="N":
